@@ -41,7 +41,7 @@ export default function Navitem() {
                     <>
                         <div className="hover:underline hover:text-teal-400 font-bold text-xl transition-all duration-700 ">
                             <div className="cursor-pointer flex items-center select-none">
-                                {item.label} {item.dropdown ? <div className=" hover:translate-y-1 transition-all duration-500 hover:text-red-400"> <BiCaretDown /></div> : ""}
+                                {item.label} {item.dropdown ? <div className=" hover:translate-y-2 transition-all duration-500 hover:text-black"> <BiCaretDown /></div> : ""}
                             </div>
                         </div>
 

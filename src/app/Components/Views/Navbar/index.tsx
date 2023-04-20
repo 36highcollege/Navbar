@@ -15,12 +15,12 @@ export default function Navbar() {
     const [theme, settheme] = useState(true)
     return (
         <>
-            <nav className="max-w-7xl bg-slate-400 opacity-100 sticky top-0 left-0 right-0 w-full flex space-x-8 items-center justify-between px-4 py-3 ">
+            <nav className="max-w-7xl bg-slate-400 opacity-100 sticky top-0 left-0 right-0 w-full flex space-x-8 items-center justify-between px-4 py-2 ">
 
-                <div className="flex space-x-14">
+                <div className="flex space-x-6  items-center justify-between">
 
-                    <div className="select-none max-w-2xl">
-                        <img src="logo.svg" alt="logo" />
+                    <div className="select-none ">
+                        <img src="logo.svg" alt="logo"  />
                     </div>
 
                     <Navitem />
