@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="flex space-x-6  items-center justify-between">
 
                     <div className="select-none ">
-                        <img src="logo.svg" alt="logo"  />
+                        <img src="logo.svg" alt="logo" />
                     </div>
 
                     <Navitem />
