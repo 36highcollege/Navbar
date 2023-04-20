@@ -15,11 +15,11 @@ export default function Navbar() {
     const [theme, settheme] = useState(true)
     return (
         <>
-            <nav className=" bg-slate-400 opacity-80 sticky top-0 left-0 right-0 w-full flex space-x-8 justify-between px-9 py-2 ">
+            <nav className="max-w-7xl bg-slate-400 opacity-100 sticky top-0 left-0 right-0 w-full flex space-x-8 items-center justify-between px-4 py-3 ">
 
                 <div className="flex space-x-14">
 
-                    <div className="select-none">
+                    <div className="select-none max-w-2xl">
                         <img src="logo.svg" alt="logo" />
                     </div>
 
@@ -28,23 +28,23 @@ export default function Navbar() {
 
                 <div className="flex items-center justify-end  space-x-4 select-none">
                     <div >
-                        <IoMdNotificationsOutline fontSize={30} filter="12" fill="red" fillOpacity={10} />
+                        <IoMdNotificationsOutline fontSize={30} filter="12" fill="black" fillOpacity={10} />
                     </div>
                     <div className="text-3xl font-bold ">|</div>
                     <div className="">
                         {theme ?
-                            (<MdDarkMode fill="black" fontFamily="extrabold" fontSize={30} onClick={() => (settheme(!theme))} />)
+                            (<MdDarkMode fill="black" fontFamily="extrabold" fontSize={25} onClick={() => (settheme(!theme))} />)
                             :
-                            (<MdOutlineLightMode fill="yellow" fontSize={35} onClick={() => (settheme(!theme))} />)
+                            (<MdOutlineLightMode fill="yellow" fontSize={25} onClick={() => (settheme(!theme))} />)
                         }
                     </div>
 
-                    <div className="flex sm:hidden">
+                    <div className="flex w-6 sm:hidden ">
                         {
                             vlaue ?
-                                (<GiHamburgerMenu fontSize={35} fill="#2ee88e" onClick={() => { setvlaue(!vlaue) }} />)
+                                (<GiHamburgerMenu fontSize={20} fill="#3DD4D4" onClick={() => { setvlaue(!vlaue) }} />)
                                 :
-                                (<IoMdClose fontSize={40} fill="red" onClick={() => { setvlaue(!vlaue) }} />)
+                                (<IoMdClose fontSize={20} fill="red" onClick={() => { setvlaue(!vlaue) }} />)
                         }
                     </div>
 
@@ -56,7 +56,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            <div className={`${vlaue ? "hidden" : "flex"}`}>
+            <div className={`${vlaue ? "flex opacity-5 -translate-y-3 transition-all duration-1000" : "flex translate-y-3 transition-all duration-700"}`}>
                 <Mbnav />
             </div>
 
