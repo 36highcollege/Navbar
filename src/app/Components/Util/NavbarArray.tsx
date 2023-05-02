@@ -3,7 +3,7 @@ import { BiCaretDown } from "react-icons/bi";
 interface Barvalue {
     label: string;
     href: string;
-    dropdown?: any;
+    dropdown?: boolean;
 }
 
 export let Navbaritem: Array<Barvalue> = [
@@ -19,7 +19,7 @@ export let Navbaritem: Array<Barvalue> = [
     {
         label: "Contact",
         href: "/Contact",
-        dropdown: " ",
+        dropdown: true,
     },
 
     {
@@ -29,25 +29,16 @@ export let Navbaritem: Array<Barvalue> = [
 
 ];
 
-
-
 export default function Navitem() {
     return (
-        <>
-
-            <div className="hidden sm:flex  items-center justify-center space-x-11   h-16">
-
-                {Navbaritem.map((item: any) => (
-                    <>
-                        <div className="hover:underline hover:text-teal-400 font-bold text-xl transition-all duration-700 ">
-                            <div className="cursor-pointer flex items-center select-none">
-                                {item.label} {item.dropdown ? <div className=" hover:translate-y-2 transition-all duration-500 hover:text-black"> <BiCaretDown /></div> : ""}
-                            </div>
-                        </div>
-
-                    </>
-                ))}
-            </div >
-        </>
+        <div className="hidden sm:flex items-center justify-center space-x-6">
+            {Navbaritem.map((item: any) => (
+                <div className="hover:underline hover:text-gray-800 font-semibold text-lg group">
+                    <div className="cursor-pointer flex items-center select-none">
+                        {item.label} {item.dropdown ? <div className=" group-hover:rotate-180 duration-500 mt-1"> <BiCaretDown /></div> : ""}
+                    </div>
+                </div>
+            ))}
+        </div>
     )
-}
+};
